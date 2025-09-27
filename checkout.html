@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الشراء - Y0 Hardware</title>
+    <meta name="description" content="إتمام الشراء في متجر Y0 Hardware">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/typography-enhanced.css">
+    <link rel="stylesheet" href="assets/css/fixes.css">
+    <link rel="stylesheet" href="assets/css/color-fixes.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/final-fix.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-microchip"></i> Y0 Hardware</h1>
+                    </a>
+                </div>
+                
+                <!-- Simplified Navigation for Checkout -->
+                <nav class="checkout-nav">
+                    <a href="cart.html" class="back-to-cart">
+                        <i class="fas fa-arrow-right"></i>
+                        العودة للسلة
+                    </a>
+                </nav>
+                
+                <!-- Security Badge -->
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>دفع آمن</span>
+                </div>
+                
+                <!-- Theme Toggle Button - مخفي مؤقتاً للتطوير لاحقاً -->
+                <!-- 
+                <button class="navbar-theme-toggle" id="navbarThemeToggle" title="تبديل المظهر">
+                    <i class="fas fa-sun icon sun-icon"></i>
+                    <i class="fas fa-moon icon moon-icon"></i>
+                </button>
+                -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <!-- Checkout Steps -->
+            <div class="checkout-steps">
+                <div class="step completed">
+                    <span class="step-number">1</span>
+                    <span class="step-label">السلة</span>
+                </div>
+                <div class="step-line completed"></div>
+                <div class="step active">
+                    <span class="step-number">2</span>
+                    <span class="step-label">الدفع</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-label">التأكيد</span>
+                </div>
+            </div>
+
+            <!-- Checkout Content -->
+            <div class="checkout-content">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <form id="checkoutForm">
+                        <!-- Customer Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> معلومات العميل</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">الاسم الأول *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">اسم العائلة *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">رقم الهاتف *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> عنوان الشحن</h3>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="address">العنوان التفصيلي *</label>
+                                    <textarea id="address" name="address" rows="3" required placeholder="رقم المبنى، اسم الشارع، الحي"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">المدينة *</label>
+                                    <select id="city" name="city" required>
+                                        <option value="">اختر المدينة</option>
+                                        <option value="cairo">القاهرة</option>
+                                        <option value="giza">الجيزة</option>
+                                        <option value="alexandria">الإسكندرية</option>
+                                        <option value="mansoura">المنصورة</option>
+                                        <option value="tanta">طنطا</option>
+                                        <option value="aswan">أسوان</option>
+                                        <option value="luxor">الأقصر</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">الرمز البريدي</label>
+                                    <input type="text" id="postalCode" name="postalCode">
+                                </div>
+                            </div>
+                            
+                            <!-- Shipping Options -->
+                            <div class="shipping-options">
+                                <h4>خيارات الشحن</h4>
+                                <div class="shipping-option">
+                                    <input type="radio" id="standardShipping" name="shipping" value="standard" checked>
+                                    <label for="standardShipping">
+                                        <div class="option-info">
+                                            <span class="option-title">شحن عادي</span>
+                                            <span class="option-desc">3-5 أيام عمل</span>
+                                        </div>
+                                        <span class="option-price">مجاني</span>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" id="expressShipping" name="shipping" value="express">
+                                    <label for="expressShipping">
+                                        <div class="option-info">
+                                            <span class="option-title">شحن سريع</span>
+                                            <span class="option-desc">1-2 أيام عمل</span>
+                                        </div>
+                                        <span class="option-price">100 ج.م</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-credit-card"></i> طريقة الدفع</h3>
+                            <div class="payment-methods">
+                                <div class="payment-option">
+                                    <input type="radio" id="cashOnDelivery" name="payment" value="cod" checked>
+                                    <label for="cashOnDelivery">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <div class="payment-info">
+                                            <span class="payment-title">الدفع عند الاستلام</span>
+                                            <span class="payment-desc">ادفع نقداً عند وصول الطلب</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="creditCard" name="payment" value="card">
+                                    <label for="creditCard">
+                                        <i class="fas fa-credit-card"></i>
+                                        <div class="payment-info">
+                                            <span class="payment-title">بطاقة ائتمان</span>
+                                            <span class="payment-desc">Visa, MasterCard, American Express</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="bankTransfer" name="payment" value="transfer">
+                                    <label for="bankTransfer">
+                                        <i class="fas fa-university"></i>
+                                        <div class="payment-info">
+                                            <span class="payment-title">تحويل بنكي</span>
+                                            <span class="payment-desc">تحويل مباشر إلى الحساب البنكي</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="vodafoneCash" name="payment" value="vodafone">
+                                    <label for="vodafoneCash">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <div class="payment-info">
+                                            <span class="payment-title">فودافون كاش</span>
+                                            <span class="payment-desc">دفع عبر محفظة فودافون</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Credit Card Details (Hidden by default) -->
+                            <div class="card-details" id="cardDetails" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="cardNumber">رقم البطاقة *</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expiryDate">تاريخ الانتهاء *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="cardName">اسم حامل البطاقة *</label>
+                                        <input type="text" id="cardName" name="cardName" placeholder="كما هو مكتوب على البطاقة">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Notes -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-sticky-note"></i> ملاحظات الطلب</h3>
+                            <div class="form-group">
+                                <label for="orderNotes">ملاحظات إضافية (اختياري)</label>
+                                <textarea id="orderNotes" name="orderNotes" rows="3" placeholder="أي تعليمات خاصة للتوصيل أو ملاحظات أخرى"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="form-section">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                <label for="agreeTerms">
+                                    أوافق على <a href="#" target="_blank">الشروط والأحكام</a> و <a href="#" target="_blank">سياسة الخصوصية</a>
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="subscribeNewsletter" name="subscribeNewsletter">
+                                <label for="subscribeNewsletter">
+                                    أريد الاشتراك في النشرة الإخبارية لتلقي العروض والتحديثات
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-card">
+                        <h3>ملخص الطلب</h3>
+                        
+                        <!-- Order Items -->
+                        <div class="order-items" id="orderItems">
+                            <!-- Items will be loaded here -->
+                        </div>
+
+                        <!-- Price Summary -->
+                        <div class="price-summary">
+                            <div class="summary-row">
+                                <span>المجموع الفرعي:</span>
+                                <span id="summarySubtotal">0 ج.م</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>الشحن:</span>
+                                <span id="summaryShipping">مجاني</span>
+                            </div>
+                            <div class="summary-row discount-row" id="summaryDiscountRow" style="display: none;">
+                                <span>الخصم:</span>
+                                <span id="summaryDiscount">-0 ج.م</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total-row">
+                                <span>الإجمالي:</span>
+                                <span id="summaryTotal">0 ج.م</span>
+                            </div>
+                        </div>
+
+                        <!-- Place Order Button -->
+                        <button type="submit" form="checkoutForm" class="place-order-btn" id="placeOrderBtn">
+                            <i class="fas fa-check-circle"></i>
+                            تأكيد الطلب
+                        </button>
+
+                        <!-- Security Info -->
+                        <div class="security-info">
+                            <div class="security-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>معاملة آمنة ومشفرة</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="fas fa-lock"></i>
+                                <span>حماية بيانات العملاء</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="fas fa-undo"></i>
+                                <span>ضمان الإرجاع 30 يوم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>جاري معالجة طلبك...</h3>
+            <p>يرجى عدم إغلاق هذه الصفحة</p>
+        </div>
+    </div>
+
+    <!-- Footer (Simplified for checkout) -->
+    <footer class="checkout-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#privacy">سياسة الخصوصية</a>
+                    <a href="#terms">الشروط والأحكام</a>
+                    <a href="#support">الدعم الفني</a>
+                    <a href="contact.html">تواصل معنا</a>
+                </div>
+                <div class="footer-security">
+                    <span>© 2024 Y0 Hardware - دفع آمن ومضمون</span>
+                    <div class="security-badges">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/theme-manager.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>

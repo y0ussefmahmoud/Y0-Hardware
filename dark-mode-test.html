@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الدارك مود - Y0 Hardware</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/typography-enhanced.css">
+    <link rel="stylesheet" href="assets/css/fixes.css">
+    <link rel="stylesheet" href="assets/css/color-fixes.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/final-fix.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border-radius: 8px;
+        }
+        
+        .test-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-primary);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+        }
+        
+        .test-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .test-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .theme-status {
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        
+        .status-light {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .status-dark {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 2px solid var(--accent-color);
+        }
+        
+        .navbar-theme-toggle {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            margin: 1rem auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .navbar-theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .navbar-theme-toggle .icon {
+            position: absolute;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .navbar-theme-toggle .sun-icon {
+            opacity: 0;
+            transform: rotate(180deg) scale(0.5);
+        }
+        
+        .navbar-theme-toggle .moon-icon {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+        
+        [data-theme="dark"] .navbar-theme-toggle {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--success-color) 100%);
+            box-shadow: 0 4px 15px rgba(46, 213, 115, 0.3);
+        }
+        
+        [data-theme="dark"] .navbar-theme-toggle:hover {
+            box-shadow: 0 6px 20px rgba(46, 213, 115, 0.5);
+        }
+        
+        [data-theme="dark"] .navbar-theme-toggle .sun-icon {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+        
+        [data-theme="dark"] .navbar-theme-toggle .moon-icon {
+            opacity: 0;
+            transform: rotate(-180deg) scale(0.5);
+        }
+        
+        .test-results {
+            background: var(--bg-card);
+            border: 1px solid var(--border-primary);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .hero-test {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .hero-test h1,
+        .hero-test h2,
+        .hero-test p {
+            color: white !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        .deals-test {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .deals-test h3,
+        .deals-test p {
+            color: white !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🌙 اختبار الدارك مود</h1>
+            <p>اختبار شامل لوظيفة تبديل المظهر في موقع Y0 Hardware</p>
+        </div>
+        
+        <!-- زر الدارك مود -->
+        <div class="test-section">
+            <h3>🔘 زر تبديل المظهر</h3>
+            <p>انقر على الزر أدناه لتبديل المظهر:</p>
+            
+            <button class="navbar-theme-toggle" id="navbarThemeToggle" title="تبديل المظهر">
+                <i class="fas fa-sun icon sun-icon"></i>
+                <i class="fas fa-moon icon moon-icon"></i>
+            </button>
+            
+            <div class="theme-status" id="themeStatus">
+                المظهر الحالي: <span id="currentTheme">فاتح</span>
+            </div>
+        </div>
+        
+        <!-- اختبار Hero Section -->
+        <div class="test-section">
+            <h3>🎨 اختبار Hero Section</h3>
+            <div class="hero-test">
+                <h1>أحدث قطع الكمبيوتر بأفضل الأسعار</h1>
+                <h2>عنوان فرعي للاختبار</h2>
+                <p>هذا نص تجريبي لاختبار وضوح النصوص في Hero Section</p>
+                <button class="test-button">زر تجريبي</button>
+            </div>
+        </div>
+        
+        <!-- اختبار Deal Section -->
+        <div class="test-section">
+            <h3>🏷️ اختبار Deal Section</h3>
+            <div class="deals-test">
+                <h3>عروض خاصة</h3>
+                <p>خصم يصل إلى 50% على جميع المنتجات</p>
+                <div style="font-size: 2rem; font-weight: bold; color: white !important;">
+                    ⏰ 23:59:45
+                </div>
+            </div>
+        </div>
+        
+        <!-- اختبار النصوص -->
+        <div class="test-section">
+            <h3>📝 اختبار النصوص والألوان</h3>
+            <h1>عنوان رئيسي (H1)</h1>
+            <h2>عنوان فرعي (H2)</h2>
+            <h3>عنوان ثانوي (H3)</h3>
+            <p>نص عادي - يجب أن يكون واضحاً ومقروءاً في كلا المظهرين</p>
+            <p style="color: var(--text-secondary);">نص ثانوي - بلون أقل وضوحاً</p>
+            <p style="color: var(--text-muted);">نص مكتوم - للمعلومات الإضافية</p>
+            <p style="color: var(--primary-color); font-weight: 600;">نص بالون الأساسي</p>
+            <p style="color: var(--accent-color); font-weight: 600;">نص بلون التمييز</p>
+        </div>
+        
+        <!-- اختبار الأزرار -->
+        <div class="test-section">
+            <h3>🔘 اختبار الأزرار</h3>
+            <button class="test-button">زر أساسي</button>
+            <button class="test-button" style="background: var(--accent-color);">زر بلون التمييز</button>
+            <button class="test-button" style="background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">زر شفاف</button>
+        </div>
+        
+        <!-- نتائج الاختبار -->
+        <div class="test-section">
+            <h3>📊 نتائج الاختبار</h3>
+            <div class="test-results" id="testResults">
+                جاري تحميل الاختبارات...
+            </div>
+            <button class="test-button" onclick="runTests()">🔄 إعادة تشغيل الاختبارات</button>
+        </div>
+        
+        <!-- روابط التنقل -->
+        <div class="test-section">
+            <h3>🔗 روابط سريعة للاختبار</h3>
+            <button class="test-button" onclick="window.open('index.html', '_blank')">الصفحة الرئيسية</button>
+            <button class="test-button" onclick="window.open('shop.html', '_blank')">المتجر</button>
+            <button class="test-button" onclick="window.open('about.html', '_blank')">من نحن</button>
+            <button class="test-button" onclick="window.open('contact.html', '_blank')">تواصل معنا</button>
+        </div>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/theme-manager.js"></script>
+    
+    <script>
+        // متغيرات الاختبار
+        let testResults = [];
+        
+        // تحديث حالة المظهر
+        function updateThemeStatus() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const themeStatus = document.getElementById('themeStatus');
+            const currentThemeSpan = document.getElementById('currentTheme');
+            
+            if (currentTheme === 'dark') {
+                currentThemeSpan.textContent = 'داكن';
+                themeStatus.className = 'theme-status status-dark';
+            } else {
+                currentThemeSpan.textContent = 'فاتح';
+                themeStatus.className = 'theme-status status-light';
+            }
+        }
+        
+        // تشغيل الاختبارات
+        function runTests() {
+            testResults = [];
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.innerHTML = 'جاري تشغيل الاختبارات...\n';
+            
+            setTimeout(() => {
+                // اختبار تحميل theme-toggle.js
+                if (typeof toggleTheme === 'function') {
+                    addTestResult('✅ theme-toggle.js محمل بشكل صحيح');
+                } else {
+                    addTestResult('❌ theme-toggle.js غير محمل');
+                }
+                
+                // اختبار وجود الزر
+                const themeButton = document.querySelector('.navbar-theme-toggle');
+                if (themeButton) {
+                    addTestResult('✅ زر تبديل المظهر موجود');
+                } else {
+                    addTestResult('❌ زر تبديل المظهر غير موجود');
+                }
+                
+                // اختبار localStorage
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    addTestResult(`✅ المظهر محفوظ في localStorage: ${savedTheme}`);
+                } else {
+                    addTestResult('⚠️ لا يوجد مظهر محفوظ في localStorage');
+                }
+                
+                // اختبار CSS Variables
+                const rootStyles = getComputedStyle(document.documentElement);
+                const primaryColor = rootStyles.getPropertyValue('--primary-color').trim();
+                if (primaryColor) {
+                    addTestResult(`✅ متغيرات CSS تعمل بشكل صحيح: ${primaryColor}`);
+                } else {
+                    addTestResult('❌ متغيرات CSS لا تعمل');
+                }
+                
+                // اختبار data-theme attribute
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme) {
+                    addTestResult(`✅ data-theme مطبق: ${currentTheme}`);
+                } else {
+                    addTestResult('⚠️ data-theme غير مطبق');
+                }
+                
+                // اختبار الأيقونات
+                const sunIcon = document.querySelector('.sun-icon');
+                const moonIcon = document.querySelector('.moon-icon');
+                if (sunIcon && moonIcon) {
+                    addTestResult('✅ أيقونات الشمس والقمر موجودة');
+                } else {
+                    addTestResult('❌ أيقونات الشمس والقمر مفقودة');
+                }
+                
+                addTestResult('\n🎉 انتهت الاختبارات! يمكنك الآن اختبار تبديل المظهر يدوياً.');
+                
+            }, 500);
+        }
+        
+        // إضافة نتيجة اختبار
+        function addTestResult(result) {
+            testResults.push(result);
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.innerHTML = testResults.join('\n');
+            resultsDiv.scrollTop = resultsDiv.scrollHeight;
+        }
+        
+        // مراقبة تغيير المظهر
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+                    updateThemeStatus();
+                }
+            });
+        });
+        
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+        
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            updateThemeStatus();
+            runTests();
+            
+            // إضافة مستمع للزر
+            const themeButton = document.querySelector('.navbar-theme-toggle');
+            if (themeButton) {
+                themeButton.addEventListener('click', () => {
+                    setTimeout(updateThemeStatus, 100);
+                });
+            }
+        });
+        
+        // تحديث الحالة عند تحميل الصفحة
+        window.addEventListener('load', () => {
+            updateThemeStatus();
+        });
+    </script>
+</body>
+</html>

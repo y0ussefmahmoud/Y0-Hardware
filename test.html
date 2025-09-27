@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الموقع - Y0 Hardware</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/typography-enhanced.css">
+    <link rel="stylesheet" href="assets/css/fixes.css">
+    <link rel="stylesheet" href="assets/css/color-fixes.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/final-fix.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .test-section {
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid var(--border-primary);
+            border-radius: 12px;
+            background: var(--bg-card);
+        }
+        
+        .test-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .test-item {
+            padding: 1rem;
+            margin: 1rem 0;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-secondary);
+        }
+        
+        .test-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .test-colors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .color-sample {
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-primary);
+        }
+        
+        .primary-text { color: var(--text-primary); }
+        .secondary-text { color: var(--text-secondary); }
+        .tertiary-text { color: var(--text-tertiary); }
+        .muted-text { color: var(--text-muted); }
+        .accent-text { color: var(--accent-color); }
+        .primary-color-text { color: var(--primary-color); }
+        
+        .bg-primary-sample { background: var(--bg-primary); }
+        .bg-secondary-sample { background: var(--bg-secondary); }
+        .bg-tertiary-sample { background: var(--bg-tertiary); }
+        .bg-card-sample { background: var(--bg-card); }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1><i class="fas fa-microchip"></i> Y0 Hardware</h1>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="shop.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="ابحث عن المنتجات...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </div>
+                    <!-- Theme Toggle Button - مخفي مؤقتاً للتطوير لاحقاً -->
+                    <!-- 
+                    <button class="navbar-theme-toggle" id="navbarThemeToggle" title="تبديل المظهر">
+                        <i class="fas fa-sun icon sun-icon"></i>
+                        <i class="fas fa-moon icon moon-icon"></i>
+                    </button>
+                    -->
+                    <button class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Test Content -->
+    <div class="container" style="margin-top: 2rem;">
+        <div class="test-section">
+            <h2 class="test-title">🧪 اختبار ألوان النصوص والمظاهر</h2>
+            
+            <div class="test-buttons">
+                <button class="btn btn-primary" onclick="testThemeToggle()">
+                    <i class="fas fa-palette"></i> اختبار تبديل المظهر
+                </button>
+                <button class="btn btn-secondary" onclick="testScrollToTop()">
+                    <i class="fas fa-arrow-up"></i> اختبار الصعود لأعلى
+                </button>
+                <button class="btn btn-primary" onclick="testMobileMenu()">
+                    <i class="fas fa-bars"></i> اختبار القائمة المحمولة
+                </button>
+            </div>
+            
+            <div class="test-colors">
+                <div class="color-sample bg-primary-sample">
+                    <h4 class="primary-text">نص أساسي</h4>
+                    <p class="secondary-text">نص ثانوي</p>
+                    <small class="muted-text">نص مكتوم</small>
+                </div>
+                
+                <div class="color-sample bg-secondary-sample">
+                    <h4 class="primary-color-text">لون أساسي</h4>
+                    <p class="accent-text">لون مميز</p>
+                    <small class="tertiary-text">نص ثالثي</small>
+                </div>
+                
+                <div class="color-sample bg-tertiary-sample">
+                    <h4 class="primary-text">عنوان</h4>
+                    <p class="secondary-text">فقرة نصية</p>
+                    <small class="muted-text">نص صغير</small>
+                </div>
+                
+                <div class="color-sample bg-card-sample">
+                    <h4 class="primary-text">بطاقة</h4>
+                    <p class="secondary-text">محتوى البطاقة</p>
+                    <small class="accent-text">سعر: 1000 ج.م</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3 class="test-title">📱 اختبار العناصر التفاعلية</h3>
+            
+            <div class="test-item">
+                <h4 class="primary-text">بطاقة منتج تجريبية</h4>
+                <p class="secondary-text">هذا نص تجريبي لاختبار ألوان النصوص في بطاقة المنتج</p>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+                    <span class="accent-text" style="font-size: 1.2rem; font-weight: 700;">1500 ج.م</span>
+                    <span class="muted-text" style="text-decoration: line-through;">2000 ج.م</span>
+                    <span style="background: var(--error-color); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">خصم 25%</span>
+                </div>
+                <button class="btn btn-primary" style="margin-top: 1rem;">
+                    <i class="fas fa-cart-plus"></i> إضافة للسلة
+                </button>
+            </div>
+            
+            <div class="test-item">
+                <h4 class="primary-text">عداد تنازلي تجريبي</h4>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                    <div style="text-align: center;">
+                        <div class="primary-color-text" style="font-size: 2rem; font-weight: 700;">15</div>
+                        <div class="secondary-text" style="font-size: 0.9rem;">ساعة</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="primary-color-text" style="font-size: 2rem; font-weight: 700;">30</div>
+                        <div class="secondary-text" style="font-size: 0.9rem;">دقيقة</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="primary-color-text" style="font-size: 2rem; font-weight: 700;">45</div>
+                        <div class="secondary-text" style="font-size: 0.9rem;">ثانية</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3 class="test-title">✅ نتائج الاختبار</h3>
+            <div id="testResults">
+                <p class="secondary-text">انقر على الأزرار أعلاه لاختبار الوظائف...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Y0 Hardware</h3>
+                    <p>متجرك الموثوق لقطع الكمبيوتر واللابتوب والاكسسوارات</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <p><a href="index.html">الرئيسية</a></p>
+                    <p><a href="shop.html">المنتجات</a></p>
+                    <p><a href="about.html">من نحن</a></p>
+                    <p><a href="contact.html">تواصل معنا</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>معلومات التواصل</h3>
+                    <p><i class="fas fa-phone"></i> 01234567890</p>
+                    <p><i class="fas fa-envelope"></i> info@y0hardware.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Y0 Hardware. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="العودة لأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/theme-manager.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        function testThemeToggle() {
+            const themeToggle = document.querySelector('.navbar-theme-toggle');
+            if (themeToggle) {
+                themeToggle.click();
+                updateTestResults('✅ تم اختبار تبديل المظهر بنجاح');
+            } else {
+                updateTestResults('❌ لم يتم العثور على زر تبديل المظهر');
+            }
+        }
+        
+        function testScrollToTop() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            setTimeout(() => {
+                const scrollBtn = document.querySelector('.scroll-to-top');
+                if (scrollBtn && scrollBtn.classList.contains('visible')) {
+                    updateTestResults('✅ زر الصعود لأعلى يعمل بشكل صحيح');
+                } else {
+                    updateTestResults('❌ زر الصعود لأعلى لا يظهر');
+                }
+            }, 1000);
+        }
+        
+        function testMobileMenu() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            if (mobileToggle) {
+                mobileToggle.click();
+                setTimeout(() => {
+                    const navMenu = document.querySelector('.nav-menu');
+                    if (navMenu && navMenu.classList.contains('active')) {
+                        updateTestResults('✅ القائمة المحمولة تعمل بشكل صحيح');
+                        mobileToggle.click(); // إغلاق القائمة
+                    } else {
+                        updateTestResults('❌ القائمة المحمولة لا تعمل');
+                    }
+                }, 100);
+            } else {
+                updateTestResults('❌ لم يتم العثور على زر القائمة المحمولة');
+            }
+        }
+        
+        function updateTestResults(message) {
+            const results = document.getElementById('testResults');
+            const timestamp = new Date().toLocaleTimeString('ar-EG');
+            results.innerHTML += `<p class="secondary-text">[${timestamp}] ${message}</p>`;
+        }
+        
+        // اختبار تلقائي عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                updateTestResults('🚀 تم تحميل الصفحة بنجاح');
+                
+                // اختبار المتغيرات
+                const computedStyle = getComputedStyle(document.documentElement);
+                const primaryColor = computedStyle.getPropertyValue('--primary-color').trim();
+                const textPrimary = computedStyle.getPropertyValue('--text-primary').trim();
+                
+                if (primaryColor && textPrimary) {
+                    updateTestResults('✅ متغيرات CSS تعمل بشكل صحيح');
+                } else {
+                    updateTestResults('❌ مشكلة في متغيرات CSS');
+                }
+                
+                // اختبار Theme Manager
+                if (window.themeManager) {
+                    updateTestResults('✅ Theme Manager محمل بشكل صحيح');
+                } else {
+                    updateTestResults('⚠️ Theme Manager غير محمل');
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

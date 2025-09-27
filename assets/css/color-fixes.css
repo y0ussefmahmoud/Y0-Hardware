@@ -1,0 +1,502 @@
+/* ===== إصلاحات شاملة لألوان النصوص ===== */
+
+/* إصلاح Hero Section */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero-content h1,
+.hero-content h2,
+.hero-content h3,
+.hero-slide h1,
+.hero-slide h2,
+.hero-slide h3 {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hero p,
+.hero-content p,
+.hero-slide p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hero .btn,
+.hero-content .btn,
+.hero-slide .btn {
+    color: white !important;
+}
+
+/* إصلاح Deal Section */
+.deals h2,
+.deals-section h2,
+.deal-timer h2 {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.deals p,
+.deals-section p,
+.deal-timer p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.timer-label {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.countdown .time-unit {
+    color: white !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.countdown .time-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9rem !important;
+}
+
+/* إصلاح Deal Cards */
+.deal-card h3,
+.deal-card .deal-title {
+    color: var(--text-primary) !important;
+}
+
+.deal-card p,
+.deal-card .deal-description {
+    color: var(--text-secondary) !important;
+}
+
+.deal-card .price,
+.deal-card .deal-price {
+    color: var(--accent-color) !important;
+    font-weight: 700 !important;
+}
+
+.deal-card .old-price {
+    color: var(--text-muted) !important;
+}
+
+/* إصلاح Product Cards */
+.product-card h3,
+.product-card h4,
+.product-title {
+    color: var(--text-primary) !important;
+}
+
+.product-card p,
+.product-description {
+    color: var(--text-secondary) !important;
+}
+
+.product-price,
+.current-price {
+    color: var(--accent-color) !important;
+    font-weight: 700 !important;
+}
+
+.old-price {
+    color: var(--text-muted) !important;
+    text-decoration: line-through !important;
+}
+
+.discount {
+    background: var(--error-color) !important;
+    color: white !important;
+}
+
+/* إصلاح Category Cards */
+.category-card h3,
+.category-title {
+    color: var(--text-primary) !important;
+}
+
+.category-card p,
+.category-description {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Footer */
+.footer {
+    background: var(--bg-secondary) !important;
+    color: var(--text-secondary) !important;
+}
+
+.footer h3,
+.footer-section h3 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.footer p,
+.footer-section p {
+    color: var(--text-secondary) !important;
+}
+
+.footer a,
+.footer-section a {
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover,
+.footer-section a:hover {
+    color: var(--primary-color) !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-primary) !important;
+}
+
+.footer-bottom p {
+    color: var(--text-muted) !important;
+    text-align: center !important;
+}
+
+/* إصلاح Social Media Icons */
+.social-media a {
+    color: var(--text-secondary) !important;
+    font-size: 1.2rem !important;
+    margin: 0 0.5rem !important;
+    transition: color 0.3s ease !important;
+}
+
+.social-media a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* إصلاح Contact Info */
+.contact-info p {
+    color: var(--text-secondary) !important;
+}
+
+.contact-info i {
+    color: var(--primary-color) !important;
+    margin-left: 0.5rem !important;
+}
+
+/* إصلاح Section Titles */
+.section-title,
+.section h2,
+.section h3 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.section p {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Features Section */
+.features h2,
+.features-section h2 {
+    color: var(--text-primary) !important;
+}
+
+.features p,
+.features-section p {
+    color: var(--text-secondary) !important;
+}
+
+.feature-card h4 {
+    color: var(--text-primary) !important;
+}
+
+.feature-card p {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Stats */
+.stats .stat-number {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
+.stats .stat-label {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح CTA Section */
+.cta h2,
+.cta-section h2 {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.cta p,
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* إصلاح Breadcrumb */
+.breadcrumb a {
+    color: var(--text-secondary) !important;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color) !important;
+}
+
+.breadcrumb .current {
+    color: var(--text-primary) !important;
+}
+
+/* إصلاح Navigation */
+.nav-menu a {
+    color: var(--text-primary) !important;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color) !important;
+}
+
+/* إصلاح Dark Mode Specific */
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero h2,
+[data-theme="dark"] .hero h3,
+[data-theme="dark"] .hero-content h1,
+[data-theme="dark"] .hero-content h2,
+[data-theme="dark"] .hero-content h3 {
+    color: white !important;
+}
+
+[data-theme="dark"] .hero p,
+[data-theme="dark"] .hero-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="dark"] .deals h2,
+[data-theme="dark"] .deals-section h2 {
+    color: white !important;
+}
+
+[data-theme="dark"] .deals p,
+[data-theme="dark"] .deals-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="dark"] .timer-label {
+    color: white !important;
+}
+
+[data-theme="dark"] .countdown .time-unit {
+    color: white !important;
+}
+
+[data-theme="dark"] .countdown .time-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="dark"] .footer {
+    background: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .footer h3,
+[data-theme="dark"] .footer-section h3 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .footer p,
+[data-theme="dark"] .footer-section p {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .footer a,
+[data-theme="dark"] .footer-section a {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .footer a:hover,
+[data-theme="dark"] .footer-section a:hover {
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .footer-bottom p {
+    color: var(--text-muted) !important;
+}
+
+/* إصلاح عام لجميع العناصر */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* إصلاح خاص للعناصر المتدرجة */
+.hero,
+.deals,
+.deals-section,
+.cta,
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+}
+
+/* إصلاح الأزرار */
+.btn {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.btn-primary {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* إصلاح Cards العامة */
+.card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+    color: var(--text-primary) !important;
+}
+
+.card p {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Input Fields */
+input,
+textarea,
+select {
+    background: var(--bg-tertiary) !important;
+    border: 1px solid var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted) !important;
+}
+
+/* إصلاح Labels */
+label {
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+}
+
+/* إصلاح Lists */
+ul li,
+ol li {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Tables */
+table {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+th {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+td {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Modals */
+.modal {
+    background: var(--bg-modal) !important;
+    color: var(--text-primary) !important;
+}
+
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.modal h5,
+.modal h6 {
+    color: var(--text-primary) !important;
+}
+
+.modal p {
+    color: var(--text-secondary) !important;
+}
+
+/* إصلاح Alerts */
+.alert {
+    border: 1px solid var(--border-primary) !important;
+}
+
+.alert-success {
+    background: var(--success-color) !important;
+    color: white !important;
+}
+
+.alert-error {
+    background: var(--error-color) !important;
+    color: white !important;
+}
+
+.alert-warning {
+    background: var(--warning-color) !important;
+    color: var(--text-inverse) !important;
+}
+
+.alert-info {
+    background: var(--info-color) !important;
+    color: white !important;
+}
+
+/* إصلاح Badges */
+.badge {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-secondary) !important;
+}
+
+.badge-success {
+    background: var(--success-color) !important;
+    color: white !important;
+}
+
+.badge-error {
+    background: var(--error-color) !important;
+    color: white !important;
+}
+
+.badge-warning {
+    background: var(--warning-color) !important;
+    color: var(--text-inverse) !important;
+}
+
+/* إصلاح خاص للعناصر المخفية */
+.text-hide {
+    display: none !important;
+}
+
+/* إصلاح للطباعة */
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+    }
+    
+    .hero,
+    .deals,
+    .cta {
+        background: none !important;
+    }
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y0 Hardware - متجر قطع الكمبيوتر واللابتوب</title>
+    <meta name="description" content="متجر Y0 Hardware المتخصص في بيع قطع الكمبيوتر واللابتوب والاكسسوارات بأفضل الأسعار">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/typography-enhanced.css">
+    <link rel="stylesheet" href="assets/css/fixes.css">
+    <link rel="stylesheet" href="assets/css/color-fixes.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/final-fix.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1><i class="fas fa-microchip"></i> Y0 Hardware</h1>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="active">الرئيسية</a></li>
+                        <li class="dropdown">
+                            <a href="#products">المنتجات <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="#pc-parts">قطع الكمبيوتر</a>
+                                <a href="#laptops">اللابتوب</a>
+                                <a href="#accessories">الاكسسوارات</a>
+                            </div>
+                        </li>
+                        <li><a href="#deals">العروض</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="ابحث عن المنتجات...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <!-- Theme Toggle Button - مخفي مؤقتاً للتطوير لاحقاً -->
+                    <!-- 
+                    <button class="navbar-theme-toggle" id="navbarThemeToggle" title="تبديل المظهر">
+                        <i class="fas fa-sun icon sun-icon"></i>
+                        <i class="fas fa-moon icon moon-icon"></i>
+                    </button>
+                    -->
+                    <button class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h2>أحدث قطع الكمبيوتر</h2>
+                            <h3>بأفضل الأسعار في السوق</h3>
+                            <p>اكتشف مجموعتنا الواسعة من قطع الكمبيوتر عالية الجودة واللابتوب والاكسسوارات</p>
+                            <div class="hero-buttons">
+                                <a href="#products" class="btn btn-primary">تسوق الآن</a>
+                                <a href="#deals" class="btn btn-secondary">العروض الخاصة</a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=600&h=400&fit=crop" alt="Gaming PC Setup">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>تسوق حسب الفئة</h2>
+                <p>اختر من مجموعة واسعة من المنتجات عالية الجودة</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="pc-parts">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>قطع الكمبيوتر</h3>
+                    <p>معالجات، كروت الشاشة، اللوحات الأم والمزيد</p>
+                    <a href="#pc-parts" class="category-link">تسوق الآن</a>
+                </div>
+                
+                <div class="category-card" data-category="laptops">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>اللابتوب</h3>
+                    <p>أجهزة لابتوب للألعاب والعمل والدراسة</p>
+                    <a href="#laptops" class="category-link">تسوق الآن</a>
+                </div>
+                
+                <div class="category-card" data-category="accessories">
+                    <div class="category-icon">
+                        <i class="fas fa-keyboard"></i>
+                    </div>
+                    <h3>الاكسسوارات</h3>
+                    <p>لوحات مفاتيح، فئران، سماعات وأكثر</p>
+                    <a href="#accessories" class="category-link">تسوق الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>المنتجات المميزة</h2>
+                <p>أفضل المنتجات المختارة خصيصاً لك</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=300&h=300&fit=crop" alt="Gaming Laptop">
+                        <div class="product-badge">جديد</div>
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>لابتوب ألعاب عالي الأداء</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(24)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">15,999 ج.م</span>
+                            <span class="old-price">17,999 ج.م</span>
+                        </div>
+                        <button class="add-to-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=300&h=300&fit=crop" alt="Graphics Card">
+                        <div class="product-badge sale">خصم</div>
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>كارت شاشة RTX 4070</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(18)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">12,499 ج.م</span>
+                            <span class="old-price">14,999 ج.م</span>
+                        </div>
+                        <button class="add-to-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=300&h=300&fit=crop" alt="Gaming Keyboard">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>لوحة مفاتيح ميكانيكية للألعاب</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(31)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">899 ج.م</span>
+                        </div>
+                        <button class="add-to-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=300&fit=crop" alt="Gaming Headset">
+                        <div class="product-badge">الأكثر مبيعاً</div>
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>سماعة ألعاب احترافية</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(42)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">1,299 ج.م</span>
+                        </div>
+                        <button class="add-to-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section class="deals" id="deals">
+        <div class="container">
+            <div class="section-header">
+                <h2>العروض والخصومات</h2>
+                <p>لا تفوت هذه العروض المحدودة</p>
+            </div>
+            
+            <div class="deals-grid">
+                <div class="deal-card featured-deal">
+                    <div class="deal-timer">
+                        <span class="timer-label">ينتهي العرض خلال:</span>
+                        <div class="countdown">
+                            <div class="time-unit">
+                                <span class="time-value" id="days">02</span>
+                                <span class="time-label">يوم</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="hours">14</span>
+                                <span class="time-label">ساعة</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="minutes">35</span>
+                                <span class="time-label">دقيقة</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <h3>عرض خاص على أجهزة الألعاب</h3>
+                        <p>خصم يصل إلى 30% على جميع أجهزة الألعاب</p>
+                        <a href="#gaming" class="btn btn-primary">تسوق الآن</a>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">خصم 25%</div>
+                    <h4>قطع الكمبيوتر</h4>
+                    <p>خصم على جميع المعالجات وكروت الشاشة</p>
+                    <a href="#pc-parts">تسوق الآن</a>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">شحن مجاني</div>
+                    <h4>للطلبات فوق 1000 ج.م</h4>
+                    <p>استمتع بالشحن المجاني لجميع المحافظات</p>
+                    <a href="#products">تسوق الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>جاهز لبناء جهازك المثالي؟</h2>
+                <p>اكتشف مجموعتنا الكاملة من قطع الكمبيوتر عالية الجودة</p>
+                <a href="#products" class="btn btn-primary btn-large">ابدأ التسوق الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><i class="fas fa-microchip"></i> Y0 Hardware</h3>
+                        <p>متجرك الموثوق لقطع الكمبيوتر واللابتوب والاكسسوارات</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="#deals">العروض</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>الفئات</h4>
+                    <ul>
+                        <li><a href="#pc-parts">قطع الكمبيوتر</a></li>
+                        <li><a href="#laptops">اللابتوب</a></li>
+                        <li><a href="#accessories">الاكسسوارات</a></li>
+                        <li><a href="#gaming">أجهزة الألعاب</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="#support">الدعم الفني</a></li>
+                        <li><a href="#warranty">الضمان</a></li>
+                        <li><a href="#shipping">الشحن والتوصيل</a></li>
+                        <li><a href="#returns">الإرجاع والاستبدال</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 01234567890</p>
+                        <p><i class="fas fa-envelope"></i> info@y0hardware.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Y0 Hardware. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="العودة لأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/theme-manager.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
